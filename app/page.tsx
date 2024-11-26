@@ -5,6 +5,7 @@ import Header from './components/Header';
 import NFT from './components/NFT';
 import Guide from './components/Guide';
 import Footer from './components/Footer';
+import AnimatedText from './components/AnimatedText';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'mint' | 'guide'>('mint');
@@ -12,13 +13,14 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen font-sans dark:bg-background dark:text-white bg-white text-black">
       <Header />
+      <AnimatedText />
 
       <div className="flex justify-center mt-4">
         <div className="flex space-x-2">
           <button
             type="button"
             onClick={() => setActiveTab('mint')}
-            className={`px-4 py-2 rounded-t-lg ${
+            className={`px-4 py-2 rounded-t-lg font-bold ${
               activeTab === 'mint'
                 ? 'bg-[#0052ff] text-white'
                 : 'bg-gray-200 dark:bg-gray-700'
@@ -29,7 +31,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => setActiveTab('guide')}
-            className={`px-4 py-2 rounded-t-lg ${
+            className={`px-4 py-2 rounded-t-lg font-bold ${
               activeTab === 'guide'
                 ? 'bg-[#0052ff] text-white'
                 : 'bg-gray-200 dark:bg-gray-700'

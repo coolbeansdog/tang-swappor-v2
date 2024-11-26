@@ -1,18 +1,23 @@
 const Guide = () => {
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-2xl mx-auto p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
       <h2 className="text-2xl font-bold mb-4">OnchainKit Installation Guide</h2>
+
       <div className="space-y-6">
-        
+
+      <hr className="border-gray-200 dark:border-gray-700" />
+
         <div className="space-y-2">
           <h3 className="text-lg font-semibold mb-2">Create New Project</h3>
           <code className="bg-gray-100 dark:bg-gray-800 p-2 rounded block">
             npm create onchain@latest
           </code>
           <p className="text-sm mt-1 text-gray-600 dark:text-gray-400">
-            Enable TypeScript, ESLint, and Tailwind CSS during setup
+            Enable all OnchainKit features automatically with boilerplate app.
           </p>
         </div>
+
+        <hr className="border-gray-200 dark:border-gray-700" />
 
         <div>
           <h3 className="text-lg font-semibold mb-2">Import to Existing Project</h3>
@@ -32,10 +37,12 @@ const Guide = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h4 className="text-base font-normal mb-2">3. Add styles by importing <code>@coinbase/onchainkit/styles.css</code>.</h4>
+            <h4 className="text-base font-normal mb-2">3. Add styles by importing <code>@coinbase/onchainkit/styles.css</code></h4>
           </div>
 
         </div>
+        
+        <hr className="border-gray-200 dark:border-gray-700" />
 
         <div>
         <h3 className="text-lg font-semibold mb-2">That&apos;s it. It&apos;s easier than ever to build onchain.</h3>
