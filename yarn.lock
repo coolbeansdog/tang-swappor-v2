@@ -1083,10 +1083,10 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@coinbase/onchainkit@^0.35.7":
-  version "0.35.7"
-  resolved "https://registry.npmjs.org/@coinbase/onchainkit/-/onchainkit-0.35.7.tgz"
-  integrity sha512-xCBhB3iv1QYrtNMebOqEuovvoO/TJZipis8pAMWmfkPI8BJPjfUmG5xEdMLcMkEk+KzVKR53bL918I3/mUrcMA==
+"@coinbase/onchainkit@^0.35.8":
+  version "0.35.8"
+  resolved "https://registry.npmjs.org/@coinbase/onchainkit/-/onchainkit-0.35.8.tgz"
+  integrity sha512-A949U9/g2HqN2BvGI68QqOlXK0uyKxByotAzWaKJTCcRVcz8qJJqUgZX0p9BK6IkKJvUs0tgKfB7rP/OfbUSsQ==
   dependencies:
     "@tanstack/react-query" "^5"
     clsx "^2.1.1"
