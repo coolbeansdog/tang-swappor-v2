@@ -7,7 +7,7 @@ import { FundButton } from '@coinbase/onchainkit/fund';
 import Header from './components/Header';
 
 export default function Page() {
-  const { address } = useAccount();
+
 
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center px-4">

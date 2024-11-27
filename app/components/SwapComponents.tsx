@@ -12,16 +12,14 @@ import {
   SwapSettingsSlippageTitle,
   SwapToast,
 } from '@coinbase/onchainkit/swap'; 
-import { Wallet, ConnectWallet } from '@coinbase/onchainkit/wallet';
-import { useAccount, useSendTransaction } from 'wagmi';
+import { useAccount } from 'wagmi';
 import type { Token } from '@coinbase/onchainkit/token';
-import tangcat from '../images/cartoon_tang.png';
-const imageUrl: string = tangcat.src; 
+
+
 
 export default function SwapComponents() {
   const { address } = useAccount();
-  const { sendTransaction } = useSendTransaction();
-
+ 
   const ETHToken: Token = {
       address: "",
       chainId: 8453,
