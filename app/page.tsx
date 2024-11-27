@@ -1,6 +1,5 @@
 'use client';
 
-import { useAccount } from 'wagmi';
 import SwapComponents from './components/SwapComponents';
 import tangcat from './images/tang_base_ball_bat.png';
 import { FundButton } from '@coinbase/onchainkit/fund';
