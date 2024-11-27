@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  :root
+  .default-light,
+  .default-dark,
+  .base,
+  .cyberpunk,
+  .hacker
+  {
+    /* Override specific variables as needed */
+    --ock-bg-primary-hover: #AACBF2;
+    --ock-text-foreground: white;
+    --ock-icon-color-foreground: white;
+    --ock-bg-primary: black;
+    --ock-text-inverse: white;
+  }
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

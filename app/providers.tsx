@@ -10,10 +10,10 @@ export function Providers(props: { children: ReactNode }) {
       apiKey={process.env.NEXT_PUBLIC_ONCHAINKIT_API_KEY}
           chain={base}
           config={{ appearance: { 
-            logo: '/app-logo.png',
-            name: 'Tina\'s demo',
-            mode: 'auto',
-            theme: 'base',
+            logo: '/tang_base_ball_bat.png',
+            name: 'Tang Swapper',
+            mode: 'dark',
+            theme: 'default',
         },
         wallet: {
           display: 'modal',

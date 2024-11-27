@@ -1,52 +1,66 @@
 'use client';
 
-import { useState } from 'react';
+import { useAccount } from 'wagmi';
+import SwapComponents from './components/SwapComponents';
+import tangcat from './images/tang_base_ball_bat.png';
+import { FundButton } from '@coinbase/onchainkit/fund';
 import Header from './components/Header';
-import NFT from './components/NFT';
-import Guide from './components/Guide';
-import Footer from './components/Footer';
-import AnimatedText from './components/AnimatedText';
 
-export default function App() {
-  const [activeTab, setActiveTab] = useState<'mint' | 'guide'>('mint');
+export default function Page() {
+  const { address } = useAccount();
 
   return (
-    <div className="flex flex-col min-h-screen font-sans dark:bg-background dark:text-white bg-white text-black">
-      <Header />
-      <AnimatedText />
-
-      <div className="flex justify-center mt-4">
-        <div className="flex space-x-2">
-          <button
-            type="button"
-            onClick={() => setActiveTab('mint')}
-            className={`px-4 py-2 rounded-t-lg font-bold ${
-              activeTab === 'mint'
-                ? 'bg-[#0052ff] text-white'
-                : 'bg-gray-200 dark:bg-gray-700'
-            }`}
-          >
-            Mint 
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('guide')}
-            className={`px-4 py-2 rounded-t-lg font-bold ${
-              activeTab === 'guide'
-                ? 'bg-[#0052ff] text-white'
-                : 'bg-gray-200 dark:bg-gray-700'
-            }`}
-          >
-            Installation Guide
-          </button>
-        </div>
+    <div className="flex h-screen w-full flex-col items-center justify-center px-4">
+      {/* Header Section */}
+      <div className="flex items-center justify-center w-full px-4">
+        <Header />
       </div>
 
-      <main className="flex-grow flex items-center justify-center">
-        {activeTab === 'mint' ? <NFT /> : <Guide />}
-      </main>
+      {/* Main Content */}
+      <section className="flex flex-col items-center w-full max-w-3xl mx-auto rounded-xl bg-white shadow-md p-6">
+        {/* Image and Title */}
+        <div className="flex flex-col md:flex-row items-center justify-center w-full">
+          <img 
+            src={tangcat.src} 
+            alt="Tang Cat" 
+            className="w-40 md:w-52 h-auto mb-6 md:mb-0 md:mr-6"
+          />
+          <h1 className="text-3xl md:text-5xl font-bold text-center">
+            TANG CAT
+            <br />
+            <hr className="my-2 border-black w-1/2 mx-auto" />
+            <span className="block text-3xl md:text-5xl">汤 猫</span>
+          </h1>
+        </div>
 
-      <Footer />
+        {/* Swap Component */}
+        <div className="swap-container w-full mt-6 border border-gray-200 rounded-lg p-4 bg-blue-50 flex items-center justify-center">
+          <SwapComponents />
+        </div>
+
+        {/* Fund Wallet Section */}
+        <div className="flex flex-col items-center mt-4">
+          <h1 className="text-lg font-medium">Short on Funds?</h1>
+          <FundButton 
+            className="bg-[#AACBF2] text-black px-4 py-2 rounded-md hover:bg-blue-400"
+            text={'Fund Wallet'}
+            hideIcon={true}
+            popupSize="sm"
+          />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-6 text-center text-gray-600">
+        Made with <span className="text-red-500">❤️</span> by <a 
+          href="https://x.com/zawarudonft" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-blue-500 hover:underline ml-1"
+        >
+          @zawarudonft
+          </a>  using Onchain Kit
+      </footer>
     </div>
   );
 }
