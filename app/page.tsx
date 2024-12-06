@@ -2,7 +2,7 @@
 
 import SwapComponents from './components/SwapComponents';
 import tangcat from './images/tang_base_ball_bat.png';
-import { FundButton } from '@coinbase/onchainkit/fund';
+import Fund from './components/Fund';
 import Header from './components/Header';
 
 export default function Page() {
@@ -40,12 +40,7 @@ export default function Page() {
         {/* Fund Wallet Section */}
         <div className="flex flex-col items-center mt-4">
           <h1 className="text-lg font-medium">Short on Funds?</h1>
-          <FundButton 
-            className="bg-[#AACBF2] text-black px-4 py-2 rounded-md hover:bg-blue-400"
-            text={'Fund Wallet'}
-            hideIcon={true}
-            popupSize="sm"
-          />
+          <Fund />
         </div>
       </section>
 
