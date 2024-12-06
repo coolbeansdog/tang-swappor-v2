@@ -15,7 +15,7 @@ export default function Fund() {
     projectId,
     addresses: { [address.toString()]: ['base', 'ethereum'] }, // Specify chains here
     assets: ['ETH', 'USDC'],                               // Specify supported assets
-    presetFiatAmount: 10,                          // Default fiat amount
+    presetFiatAmount: 5,                          // Default fiat amount
     fiatCurrency: 'USD'                           // Default fiat currency
   }) : '';
 
